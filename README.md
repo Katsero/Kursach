@@ -1,2 +1,9 @@
 # Kursach
-OP and DB project
+
+Open site by opening startup.py file
+
+---
+
+Made by
+Romanov Alexandr
+Kamatali Alina
