@@ -3,6 +3,7 @@
 Open site by opening startup.py file
 
 Copy and paste link "http://127.0.0.1:8000/upload_and_list.html/" into your browser to enter site
+
 ---
 
 Python and Django are required to be installed.
