@@ -29,13 +29,11 @@ def upload_and_list_files(request):
     else:
         form = UploadSongForm()
 
-    # Delete non-existing files from database
     for song in Song.objects.all():
         file_path = os.path.join(settings.MEDIA_ROOT, str(song.file))
         if not os.path.exists(file_path):
             song.delete()
 
-    # Search by criteria
     query = request.GET.get('q', '')
     songs = Song.objects.filter(
         models.Q(title__icontains=query) |
@@ -44,7 +42,6 @@ def upload_and_list_files(request):
         models.Q(username__icontains=query)
     ).distinct()
 
-    # Pagination
     per_page = request.GET.get('per_page', 5)
     try:
         per_page = int(per_page) if per_page else 5

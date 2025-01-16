@@ -4,10 +4,6 @@ import platform
 
 
 def run_django_server():
-    """
-    Navigates to the project directory and starts the Django development server
-    directly in the current terminal using os and subprocess modules.
-    """
     try:
         # Construct the command to run the Django server
         command = "python manage.py runserver"
